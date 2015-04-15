@@ -1,0 +1,68 @@
+.clearfloat:after{
+	display:block;
+	clear:both;
+	content:"";
+	visibility:hidden;
+	height:0;
+}
+.clearfloat{
+	zoom:1;
+}
+.wrap_rate{
+	width:145px;
+	height:30px;
+}
+.rating_cont { 
+	background:url(../images/rating_background.png) bottom left no-repeat; 
+	border: 0; 
+	width: 80px;
+	height: 24px; 
+	text-align: left; 
+	margin-left: 6px;
+	float:left;
+}
+.rating_on { 
+	background: url(../images/rating_onbackground.png) bottom left no-repeat; 
+	width: 0px; 
+	height: 24px; 
+	position: relative; 
+	z-index: 50; 
+	top: -24px;
+}
+.rating_btns { 
+	position: relative; 
+	z-index: 100; 
+	width: 140px; 
+	height: 24px;
+}
+.rating_btns ul{ 
+	padding: 0; 
+	margin: 0; 
+	display:block; 
+	height:24px;
+	margin-left: -8px;
+}
+.rating_btns li { 
+	float: left; 
+	width: 8px; 
+	height: 24px; 
+	display: block; 
+	font-size: 0px; 
+	cursor: pointer; 
+	color: #1E1D1C;
+}
+.rates{
+	font-size: 18px;
+	font-weight: bold;
+	color: #DD5400;
+	font-style:italic;
+	display:block;
+	height:24px;
+	width:45px;
+	padding-top:5px;
+	border:none;
+	background-color:transparent;
+	margin-left:10px;
+	float:right;
+	overflow:hidden;
+}
