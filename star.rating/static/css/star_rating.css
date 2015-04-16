@@ -13,7 +13,7 @@
 	height:30px;
 }
 .rating_cont { 
-	background:url(../images/rating_background.png) bottom left no-repeat; 
+	background:url(../img/rating_background.png) bottom left no-repeat;
 	border: 0; 
 	width: 80px;
 	height: 24px; 
@@ -22,7 +22,7 @@
 	float:left;
 }
 .rating_on { 
-	background: url(../images/rating_onbackground.png) bottom left no-repeat; 
+	background: url(../img/rating_onbackground.png) bottom left no-repeat;
 	width: 0px; 
 	height: 24px; 
 	position: relative; 
