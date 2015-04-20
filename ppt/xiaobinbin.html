@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+     <!--<meta name="author" content="Bartek Szopka" /> -->
+    <!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" /> -->
+    <link href="css/googleapis.css" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+     <!--<link rel="shortcut icon" href="favicon.png" /> -->
+     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png" /> -->
+ </head>
+
+ <!--
+ impress-not-supported 在正确加载后，会移除
+ -->
+<body class="impress-not-supported">
+
+<!--
+    浏览器不支持，提示信息
+-->
+<div class="fallback-message">
+    <p>浏览器不支持，请使用最新版本的浏览器 <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    id需要对应
+    持续时间（ms），默认1000，可以通过data-transition-duration="2000"设置
+    3D效果，默认100，可以通过data-perspective="500"设置，设置为0表示不使用3D效果
+    更多参考https://developer.mozilla.org/en/CSS/perspective
+-->
+<div id="impress">
+    <!--
+        元素必须在#impress里面，而且要有step这个class
+        data-x，data-y定位
+    -->
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>小斌斌，你为何这么<b>帅</b>?</q>
+    </div>
+
+    <!--
+        id是可选的，如果没有设置，默认为step-N的样式
+        这里是step-2
+    -->
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>哼哼 <strong>哈哈</strong>?</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>额<strong>嘿嘿</strong>!</q>
+    </div>
+
+    <!--
+        data-scale="4" 设置的是正常大小的4倍
+    -->
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">说点什么呗</span>
+        <h1>不说<sup>****</sup></h1>
+        <span class="footnote"><sup>*</sup> 额，后面没时间弄啦，哈哈哈哈哈</span>
+    </div>
+
+    <!--
+        data-rotate="90"顺时针，转动90度呈现
+    -->
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>It's a <strong>presentation tool</strong> <br/>
+            inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
+            and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    </div>
+
+    <!--
+        data-z="-3000",拉远视角呈现
+    -->
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>and <b>tiny</b> ideas</p>
+    </div>
+
+    <!--
+        元素在未呈现、在呈现、已呈现三种状态时，会有三个class分别为future、present和past
+    -->
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to know more?</p>
+        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>one more thing...</p>
+    </div>
+
+    <!--
+        所有PPT的预览
+    -->
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+        <span class="footnote">* beat that, prezi ;)</span>
+    </div>
+
+    <!--
+        整理一下：
+        1. `data-x`, `data-y`, `data-z`,定义位置
+        2. `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate`,定义视角，'data-rotate-z`, `data-rotate`等效
+        3. `data-scale`,定义比例
+    -->
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        overview
+    </div>
+
+</div>
+
+<!--
+    提示信息
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    调用impress()方法可以获取api
+    1. var api = impress();
+    2. api.init()   初始化
+    3. api.next()   下一步
+    4. api.prev()   上一步
+    5. api.goto(idx | id | element, [duration])  移动到指定步骤
+-->
+
+</body>
+</html>
+
+
+
